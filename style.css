@@ -1,3 +1,10 @@
+@font-face {
+font-family: "Poppins";
+src: url("./src/poppins-regular-webfont.woff2") format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -50,10 +57,131 @@ svg * {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins, Helvetica, sans-serif;
 }
 
-.intro {
-    font-size: 50px;
-    transform: translate(calc(5vw), calc(50vh - 50%)) ;
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 0;
 }
+
+a:link {
+    color: #000;
+}
+
+a:focus {
+    border-bottom: none;
+}
+
+a:hover {
+    border-bottom: none;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+}
+
+.categories {
+    margin-top: 30px;
+    padding: 0 15px;
+    font-size: 18px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.categories-list {
+    gap: 10px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+    color: black;
+    background-color: #F1F2F3;
+}
+
+.active {
+    background-color: #4DAA59;
+    color: white !important;
+}
+
+.catalog {
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.brands-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    align-items: center;
+    width: 20%;
+}
+
+.brands-title {
+    font-size: 26px;
+    text-align: center;
+}
+
+.divider {
+    width: 90%;
+    height: 1px;
+    background-color: #828282;
+}
+
+.y-divider {
+    width: 1px;
+    height: 800px;
+    background-color: #828282;
+}
+
+.brands-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.brand-item {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+input[type=checkbox] {
+    -ms-transform: scale(1.5); /* IE */
+    transform: scale(1.5);
+    border-radius: 6px;
+    margin: 0;
+}
+
+.brand-name {
+    font-size: 18px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.catalog-cards {
+    display: flex;
+    flex-grow: 1;
+    height: 900px;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 25px;
+    flex-wrap: wrap;
+}
+
