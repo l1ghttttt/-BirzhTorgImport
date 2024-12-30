@@ -140,7 +140,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .y-divider {
-    width: 1px;
+    width: 3px;
     height: 650px;
     margin-top: 20px;
     background-color: #828282;
@@ -171,44 +171,50 @@ input[type=checkbox] {
 }
 
 .brand-name {
-    font-size: 18px;
+    font-size: 1.2vw;
     user-select: none;
     cursor: pointer;
 }
 
+.catalog-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding-top: 25px;
+}
+
 .catalog-cards {
     display: flex;
-    flex-grow: 1;
-    height: 900px;
-    gap: 35px;
-    padding-top: 25px;
     flex-wrap: wrap;
+}
+
+.card-item-container {
+    width: 20%;
+    padding: 1.5%;
 }
 
 .card-item {
     display: flex;
-    padding: 20px 15px;
+    padding: 7.5% 5% 7.5% 5%;
     border-radius: 15px;
     border: 1px solid #828282;
 }
 
 .card-link {
     display: flex;
-    cursor: pointer;
     flex-direction: column;
     align-items: center;
     gap: 13px;
 }
 
 .card-title {
-    font-size: 18px;
-    height: 85px;
-    width: 240px;
+    font-size: 1.15vw;
+    height: 5vw;
+    width: 100%;
 }
 
 .relative-container {
-    width: 240px;
-    height: 240px;
+    width: 100%;
     position: relative;
 }
 
@@ -228,6 +234,7 @@ input[type=checkbox] {
     padding: 13px 25px;
     font-weight: bold;
     border: none;
+    font-size: 0.9vw;
 }
 
 .card-button:hover {
@@ -241,8 +248,153 @@ input[type=checkbox] {
 }
 
 .company-logo {
-    width: 90px;
+    width: 6vw;
     position: absolute;
     top: 8px;
     right: 8px;
+}
+
+.catalog-main {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 1440px) {
+    .card-title {
+        font-size: 1.3vw;
+    }
+    .card-button {
+        font-size: 1.23vw;
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .card-item-container {
+        width: 25%;
+        padding: 1%;
+    }
+    .card-button {
+        font-size: 1.2vw;
+        padding: 10px 15px;
+    }
+    .card-title {
+        font-size: 1.5vw;
+        height: 6vw;
+    }
+    .categories {
+        font-size: 15px;
+    }
+    .brand-name {
+        font-size: 1.5vw;
+    }
+    .company-logo {
+        width: 7vw;
+    }
+    .card-link {
+        gap: 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-item-container {
+        width: 33.3%;
+        padding: 1%;
+    }
+    .card-button {
+        font-size: 1.8vw;
+        padding: 10px 12px;
+    }
+    .card-title {
+        font-size: 2.2vw;
+        height: 9vw;
+    }
+    .categories {
+        font-size: 14px;
+    }
+    .brands-filter {
+        width: 200px;
+        padding: 10px 0;
+    }
+    .brand-name {
+        font-size: 2.5vw;
+    }
+    .company-logo {
+        width: 9vw;
+    }
+    .card-link {
+        gap: 9px;
+    }
+}
+
+@media (max-width: 580px) {
+    .card-item-container {
+        width: 33.3%;
+        padding: 1%;
+    }
+    .card-button {
+        font-size: 2.2vw;
+        padding: 10px 15px;
+    }
+    .card-title {
+        font-size: 2.8vw;
+        height: 11vw;
+    }
+    .company-logo {
+        width: 11vw;
+    }
+    .card-link {
+        gap: 8px;
+    }
+    .brand-name {
+        font-size: 2.9vw;
+    }
+
+    .catalog {
+        display: flex;
+        flex-direction: column;
+    }
+    .y-divider {
+        display: none;
+    }
+    .brands-filter {
+        width: 100%;
+    }
+    .brands-list {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding: 0;
+        gap: 15px;
+    }
+    .brand-item {
+        gap: 10px;
+        padding: 1.5%;
+    }
+    .divider {
+        order: 3;
+    }
+}
+
+@media (max-width: 500px) {
+    .card-item-container {
+        width: 50%;
+        padding: 1%;
+    }
+    .card-button {
+        font-size: 3.5vw;
+        padding: 10px 15px;
+    }
+    .card-title {
+        font-size: 4vw;
+        height: 16vw;
+    }
+    .company-logo {
+        width: 18vw;
+    }
+    .brand-name {
+        font-size: 16px;
+    }
 }
